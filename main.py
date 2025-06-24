@@ -1,4 +1,4 @@
-from stats import get_num_words, character_count
+from stats import get_num_words, character_count, sort_dict
 
 def main():
     book_path = "books/frankenstein.txt"
@@ -6,7 +6,8 @@ def main():
     dict = character_count(text)
     num_words = get_num_words(text)
     print(f"{num_words} words found in the document")
-    print(dict)
+    # This doesn't work
+    print(sort_dict(dict))
     
 
 
