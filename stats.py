@@ -1,9 +1,10 @@
+characters = {}
+
 def get_num_words(text):
     words = text.split()
     return len(words)
 
 def character_count(text):
-    characters = {}
     for letter in text:
         if letter.lower() in characters:
             characters[letter.lower()] += 1    
@@ -15,3 +16,5 @@ def character_count(text):
 def sort_dict():
     pass
 
+character_count("books/frankenstein.txt")
+print(characters)
