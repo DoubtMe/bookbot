@@ -1,3 +1,4 @@
+import sys
 from stats import get_num_words, character_count, sort_dict
 
 def main():
@@ -5,9 +6,14 @@ def main():
     text = get_book_text(book_path)
     dict = character_count(text)
     num_words = get_num_words(text)
-    print(f"{num_words} words found in the document")
+    print(f"============ BOOKBOT ============\nAnalysing book found at {book_path}\n----------- Word Count ----------\nFound {num_words} total words\n--------- Character Count -------")
     # This doesn't work
-    print(sort_dict(dict))
+    sorted_dict = sort_dict(dict)
+    for item in sorted_dict:
+       if item['char'].isalpha():
+            print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
+    
     
 
 
